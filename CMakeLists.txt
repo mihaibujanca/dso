@@ -130,3 +130,14 @@ else()
 	message("--- not building dso_dataset, since either don't have openCV or Pangolin.")
 endif()
 
+
+add_library(dso-original SHARED
+		dso_library.cpp
+		)
+
+
+target_link_libraries(dso-original
+		dso
+		)
+
+generate_slam_library(dso-original "")
