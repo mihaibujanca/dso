@@ -827,6 +827,7 @@ void FullSystem::addActiveFrame( ImageAndExposure* image, int id )
 
 	if(!initialized)
 	{
+	    std::cerr<<"Not initialized!"<<std::endl;
 		// use initializer!
 		if(coarseInitializer->frameID<0)	// first frame set. fh is kept by coarseInitializer.
 		{
