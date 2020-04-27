@@ -204,7 +204,11 @@ extern int staticPattern[10][40][2];
 extern int staticPatternNum[10];
 extern int staticPatternPadding[10];
 
-
+extern float settings_scaledVarTH;
+extern float settings_absVarTH;
+extern int settings_pointCloudMode;
+extern float settings_minRelBS;
+extern int settings_sparsity;
 
 
 //#define patternNum staticPatternNum[setting_pattern]

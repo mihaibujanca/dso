@@ -310,5 +310,10 @@ int staticPatternPadding[10] = {
 		4
 };
 
+float settings_scaledVarTH = 0.001;
+float settings_absVarTH  = 0.001;
+int settings_pointCloudMode = 1;
+float settings_minRelBS = 0.1;
+int settings_sparsity = 1;
 
 }

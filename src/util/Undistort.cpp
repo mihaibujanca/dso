@@ -900,6 +900,13 @@ void Undistort::readFromFile(const char* configFileName, int nPars, std::string 
         K(1,2) = outputCalibration[3] * h - 0.5;
 	}
 
+    K.setIdentity();
+    K(0,0) = parsOrg[0];
+    K(1,1) = parsOrg[1];
+    K(0,2) = parsOrg[2];
+    K(1,2) = parsOrg[3];
+    passthrough = true;
+
 	if(benchmarkSetting_fxfyfac != 0)
 	{
 		K(0,0) = fmax(benchmarkSetting_fxfyfac, (float)K(0,0));
